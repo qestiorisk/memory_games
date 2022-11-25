@@ -1,0 +1,66 @@
+* {
+font-family: 微軟正黑體;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: grey;
+    overflow: hidden;
+}
+
+body{
+    position: relative; /* 垂直置中(?) */
+    display: flex; /* 垂直置中(?) */
+    align-items: center; /* 垂直置中(?) */
+    background: linear-gradient(45deg, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+}
+
+#wrapper {
+    position: relative;
+    padding: 1%;
+    width: 89%; 
+    height: 94%;
+    background-color: #eee;
+    border-radius: 5px;
+    left: 5%;
+}
+
+#score {
+    text-align: right;
+}
+
+#quiz, #nowStatus {
+    text-align: center;
+    padding: 5%;
+}
+
+#nowStatus {
+    text-align: center;
+    font-weight: 100;
+}
+
+#optionsList {
+    margin-top: 30%;
+}
+
+ul {
+    list-style: disc;
+    margin: 0 0 1.5em 0;
+    padding-left: 1em;
+    list-style: none;
+}
+
+ul li {
+    padding-left: 0.5em;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: large;
+    color: rgb(70, 25, 25);
+    margin-top: 1.5em;
+    margin-right: 10px;
+    border: 1px rgb(128, 128, 128) solid;
+    border-radius: 0.5em;
+    cursor: pointer;
+}
