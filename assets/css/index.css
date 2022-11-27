@@ -21,7 +21,6 @@ body{
 
 #wrapper {
     box-sizing: border-box;
-    /* position: relative; */
     padding: 1%;
     width: cal(100%-30px); 
     /* height: cal(100%-30px);  */
@@ -33,11 +32,12 @@ body{
 
 #score {
     text-align: right;
+    margin-bottom: 20px;
 }
 
 #quiz {
     text-align: center;
-    padding: 5% 5% 0% 5%;
+    padding: 5%;
 }
 
 #nowStatus {
@@ -47,7 +47,7 @@ body{
 }
 
 #optionsList {
-    /* margin-top: 30%; */
+    margin-top: 10px;
 }
 
 ul {
@@ -65,9 +65,27 @@ ul li {
     padding-bottom: 5px;
     font-size: medium;
     color: rgb(70, 25, 25);
-    margin-top: 15px;
+    margin-top: 25px;
     margin-right: 10px;
     border: 1px rgb(128, 128, 128) solid;
     border-radius: 0.5em;
     cursor: pointer;
+}
+
+@media screen and (min-width: 650px) {
+    #wrapper {
+        max-width: 50%;
+        position: relative;
+        left: 50%;
+        transform: translate(-50%, 0);
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    #wrapper {
+        max-width: 30%;
+        position: relative;
+        left: 50%;
+        transform: translate(-50%, 0);
+    }
 }

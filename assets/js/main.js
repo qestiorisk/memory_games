@@ -97,7 +97,7 @@ var words = d_rows4;
 var question = null;
 var options = [];
 var grade = 0;
-var status = "";
+var _status = "";
 // var currentOption;
 
 
@@ -130,7 +130,7 @@ function pick(){
 
 	//放到html裡
 	score.style.color = 'black';
-	score.innerHTML = "Score: " + grade;
+	score.innerHTML = grade;
 	nowStatus.style.color = 'black';
 	nowStatus.innerHTML = "請選擇";
 	quiz.innerHTML = question.question
@@ -148,13 +148,13 @@ var clicked = 1;
 
 function check(option){
 	if (option.correct){
-		status = "correct";
+		_status = "對ㄉ";
 		if (clicked == 1) {
 			grade++;
 			clicked++;};
-		nowStatus.innerHTML = status;
+		nowStatus.innerHTML = _status;
 		nowStatus.style.color = 'green';
-		score.innerHTML = "Score: " + (grade-1) + " +1";
+		score.innerHTML = "禮拜一小考分數 +1";
 		score.style.color = 'orange';
 		// console.log(status, grade);
 		setTimeout(()=>{
@@ -162,9 +162,9 @@ function check(option){
 			clicked = 1;
 		},900)
 	} else {
-		status = "wrong"
+		_status = "欸不是"
 		nowStatus.style.color = 'red';
-		nowStatus.innerHTML = status;
+		nowStatus.innerHTML = _status;
 		// console.log(status, grade)
 	}
 }
