@@ -2,43 +2,48 @@
 font-family: 微軟正黑體;
 }
 
-html, body {
+html {
     height: 100%;
     margin: 0;
     padding: 0;
-    background-color: grey;
-    overflow: hidden;
+    /* background-color: grey; */
+    /* overflow: hidden; */
 }
 
 body{
-    position: relative; /* 垂直置中(?) */
-    display: flex; /* 垂直置中(?) */
-    align-items: center; /* 垂直置中(?) */
+    box-sizing: border-box;
+    margin: 0;
+    height: 100vh;
     background: linear-gradient(45deg, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+    padding: 15px;
+
 }
 
 #wrapper {
-    position: relative;
+    box-sizing: border-box;
+    /* position: relative; */
     padding: 1%;
-    width: 89%; 
-    height: 94%;
+    width: cal(100%-30px); 
+    /* height: cal(100%-30px);  */
+    height: 100%;
     background-color: #eee;
     border-radius: 5px;
-    left: 5%;
+    /* left: 5%; */
 }
 
 #score {
     text-align: right;
 }
 
-#quiz, #nowStatus {
+#quiz {
     text-align: center;
-    padding: 5%;
+    padding: 5% 5% 0% 5%;
 }
 
 #nowStatus {
     text-align: center;
     font-weight: 100;
+    margin: 0;
 }
 
 #optionsList {
@@ -53,12 +58,14 @@ ul {
 }
 
 ul li {
+    background-color: #eee;
+    border-radius: 5px;
     padding-left: 0.5em;
     padding-top: 5px;
     padding-bottom: 5px;
-    font-size: large;
+    font-size: medium;
     color: rgb(70, 25, 25);
-    margin-top: 1.5em;
+    margin-top: 15px;
     margin-right: 10px;
     border: 1px rgb(128, 128, 128) solid;
     border-radius: 0.5em;
